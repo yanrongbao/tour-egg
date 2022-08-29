@@ -5,7 +5,7 @@
 /**
  * @param {Egg.EggAppInfo} appInfo app info
  */
-module.exports = appInfo => {
+module.exports = (appInfo) => {
   /**
    * built-in config
    * @type {Egg.EggAppConfig}
@@ -21,6 +21,11 @@ module.exports = appInfo => {
   config.security = {
     csrf: {
       enable: false,
+    },
+  };
+  exports.view = {
+    mapping: {
+      '.html': 'ejs',
     },
   };
 
